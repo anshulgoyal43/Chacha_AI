@@ -43,7 +43,8 @@ with st.sidebar:
     
     DOCS_DIR = os.path.abspath("./docs")
     if not os.path.exists(DOCS_DIR):
-        os.makedirs(DOCS_DIR)
+        os.makedirs(DOCS_DIR, exist_ok=True)
+
 
     st.subheader("Add to the Knowledge Base")
     with st.form("my-form", clear_on_submit=True):
